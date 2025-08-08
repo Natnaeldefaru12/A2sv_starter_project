@@ -19,7 +19,7 @@ const page = () => {
   const userName = "John";
   const percentComplete = 75;
   return (
-    <div className="w-[1280px] m-auto">
+    <div className="max-w-[1280px] w-full mx-auto px-2 sm:px-4 md:px-8">
       <div>
         <Card className="bg-gray-100 border-none shadow-none">
           <CardHeader>
@@ -33,8 +33,8 @@ const page = () => {
         </Card>
       </div>
 
-      <div className="h-[611.5px] m-auto flex w-[1216] gap-x-6">
-        <Card className="pl-4 r-4  text-white bg-[linear-gradient(to_right,_#6366F1,_#9333EA)] h-[212px] flex-2">
+      <div className="flex flex-col lg:flex-row gap-6 h-auto lg:h-[611.5px] w-full">
+        <Card className="pl-4 pr-4 text-white bg-[linear-gradient(to_right,_#6366F1,_#9333EA)] h-[212px] flex-shrink-0 flex-grow-0 lg:flex-[2] mb-4 lg:mb-0">
           <CardHeader className="p-2 text-white">
             <CardTitle className="text-xl font-bold">
               G7 November Intake
@@ -57,14 +57,7 @@ const page = () => {
           </CardFooter>
         </Card>
         <div className="flex flex-col flex-1 gap-y-4 min-h-0">
-          <Card
-            className="flex-1 flex flex-col"
-            style={{
-              backgroundColor: "#ffffff",
-              boxShadow:
-                "0px 8px 10px -6px rgba(0,0,0,0.10), 0px 20px 25px -5px rgba(0,0,0,0.10)",
-            }}
-          >
+          <Card className="flex-1 flex flex-col bg-white shadow-md">
             <CardHeader>
               <CardTitle className="pb-1 font-bold text-lg">
                 Complete Your Profile
@@ -101,14 +94,7 @@ const page = () => {
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card
-            className="flex-[2] flex flex-col"
-            style={{
-              backgroundColor: "#ffffff",
-              boxShadow:
-                "0px 8px 10px -6px rgba(0,0,0,0.10), 0px 20px 25px -5px rgba(0,0,0,0.10)",
-            }}
-          >
+          <Card className="flex-[2] flex flex-col bg-white shadow-md">
             <CardHeader className="flex flex-col flex-1">
               <CardTitle className="pb-1 font-bold text-lg">
                 Application Checklist
@@ -137,14 +123,7 @@ const page = () => {
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card
-            className="flex-1 flex flex-col"
-            style={{
-              backgroundColor: "#ffffff",
-              boxShadow:
-                "0px 8px 10px -6px rgba(0,0,0,0.10), 0px 20px 25px -5px rgba(0,0,0,0.10)",
-            }}
-          >
+          <Card className="flex-1 flex flex-col bg-white shadow-md">
             <CardHeader>
               <CardTitle className="font-bold text-lg">
                 Helpful Resources

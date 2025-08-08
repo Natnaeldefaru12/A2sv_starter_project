@@ -17,8 +17,6 @@ import { useState } from "react";
 
 const page = () => {
   const { data: session } = useSession();
-  const token = session?.accessToken;
-  console.log(token);
 
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState({
@@ -37,8 +35,7 @@ const page = () => {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const userName = "John";
-  const percentComplete = 75; // Example percentage
-  // Field-level validation for onBlur
+  const percentComplete = 75; 
 
   const handleSubmit = async () => {
     const isValid = validateStep(step);
@@ -46,7 +43,6 @@ const page = () => {
 
     const data = new FormData();
 
-    // Append text fields
     data.append("student_id", formData.idNumber);
     data.append("school", formData.school);
     data.append("degree", formData.degree);
@@ -56,7 +52,7 @@ const page = () => {
     data.append("essay_about_you", formData.about);
     data.append("essay_why_a2sv", formData.whyJoin);
 
-    // Append file field
+  
     if (formData.resume) {
       data.append("resume", formData.resume); 
     }
@@ -81,7 +77,7 @@ const page = () => {
 
       if (!res.ok) throw new Error("Submission failed");
 
-      console.log("✅ Form submitted successfully");
+      console.log("✅ Form submitted suc                                                                                                                                                                                                                                                                                                                             cessfully");
     } catch (err) {
       console.error("❌ Error submitting form:", err);
     }
@@ -133,7 +129,6 @@ const page = () => {
     return Object.keys(newErrors).length === 0;
   }
   const handleNext = () => {
-    // Validate the NEXT step (step+1) requirements before moving forward
     if (validateStep(step + 1)) {
       setStep(step + 1);
     }
